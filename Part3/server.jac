@@ -113,7 +113,7 @@ node Session {
     can chat with interact entry {
         self.chat_history.append({"role": "user", "content": here.message});
         response = infer(message=here.message, chat_history=self.chat_history) spawn root;
-        self.chat_history.append({"role": "assistant", "content": response.response});
+        self.chat_history.append({"role": "assistant", "content": response});
         print(response);
         report {
             "response": response.response

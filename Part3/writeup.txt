@@ -1,0 +1,10 @@
+
+1. Explain what the state represents and how it can be used in the chatbot:
+Sum handles scenarios where the user wants to add numbers. The chatbot will respond with the sum based on the query.
+
+
+2. Explain how the chatbot will route the user query to your custom chat model based on the classification:
+The routing logic is depends on the classification of the user's query.
+From the router node, the message is classified and send to respective Chats, including RAG, QA, or SUM.
+If the message is categorized as SUM, the query will be routed to SUMChat node.
+This node will return the value of the summation of values given in the query.
